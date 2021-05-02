@@ -1,11 +1,32 @@
 <template>
+  <app-select
+      :options="selectOptions"
+      :selected="selectedOption"
+      @onChange="onChange"
+  />
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue'
+import { defineComponent, ref } from 'vue'
+import AppSelect from './components/select/app-select.vue'
 
 export default defineComponent({
   name: 'App',
+  components: {AppSelect},
+  setup() {
+    const selectOptions = ref(['Tomek', 'Zdzicho', 'Adam']);
+    const selectedOption = ref('Adam');
+
+    return {
+      selectedOption,
+      selectOptions
+    }
+  },
+  methods: {
+    onChange(value: string) {
+      this.selectedOption = value
+    }
+  }
 })
 </script>
 
