@@ -24,7 +24,7 @@ export default defineComponent({
     },
     selected: {
       type: String,
-      required: true
+      required: false
     }
   },
 
