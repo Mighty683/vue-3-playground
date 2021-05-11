@@ -9,17 +9,17 @@
 <script lang="ts">
 import { defineComponent, ref } from 'vue'
 import AppSelect from './components/select/app-select.vue'
+import {setupUsersState} from "./components/usersState";
 
 export default defineComponent({
   name: 'App',
   components: {AppSelect},
   setup() {
-    const selectOptions = ref(['Tomek', 'Zdzicho', 'Adam']);
-    const selectedOption = ref('Adam');
+    const { users } = setupUsersState();
 
     return {
-      selectedOption,
-      selectOptions
+      selectOptions: users,
+      selectedOption: users.value[1]
     }
   },
   methods: {
