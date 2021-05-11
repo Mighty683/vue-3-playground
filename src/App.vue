@@ -14,7 +14,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, ref } from 'vue'
+import { defineComponent } from 'vue'
 import AppSelect from './components/select/app-select.vue'
 import {setupUsersState} from "./modules/users/users.state";
 
