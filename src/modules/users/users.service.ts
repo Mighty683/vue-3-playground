@@ -3,5 +3,5 @@ export async function getUsers(): Promise<String[]> {
   return new Promise(resolve =>
     setTimeout(() => {
       resolve(['Tomek', 'Adam', 'Robert'])
-    }, 2000))
+    }, 2000));
 }

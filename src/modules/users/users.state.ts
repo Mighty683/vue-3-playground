@@ -1,6 +1,6 @@
 import {Ref, ref} from "vue";
 
-import * as UsersService from '../../services/users.service'
+import * as UsersService from './users.service'
 
 type UsersState = {
   users: Ref<String[]>
